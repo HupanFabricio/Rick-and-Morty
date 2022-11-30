@@ -1,0 +1,61 @@
+.container{
+    
+    border: 3px solid rgb(165, 165, 165);
+    background-color: rgba(126, 126, 126, 0.753);
+    width: 180px;
+    border-radius: 10px;
+    
+    margin: 20px;
+}
+
+.container:hover{
+    transition: 0.5s;
+    box-shadow: 0 0 100px rgb(255, 255, 255);
+}
+.poss{  
+    position: relative;
+
+    margin: 10px;
+}
+
+.poss img{
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(15, 15, 15);
+}
+.poss h2{
+    position: absolute;
+    left: 5px;
+    top:120px;
+    background-color: rgb(92, 93, 94);
+    color: white;
+    font-size: 16px;
+    font-style:italic;
+}
+
+.butonConteiner{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.butonConteiner button {
+    margin: 10px 10px 0px 0px;
+    background-color:red;
+    border: 0px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    
+}
+
+.butonConteiner button:hover {
+    transition: 1s;
+    color: black;
+}
+
+.data {
+    display: flex;
+    justify-content: space-around;
+    font-size: 13px;
+  
+}

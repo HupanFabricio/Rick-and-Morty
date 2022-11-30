@@ -1,0 +1,29 @@
+.search{
+    padding: 20px;
+    display: flex;
+    justify-content: right;
+    margin: 0 10px 10px 10px;
+}
+
+.search button {
+    border-radius: 3px;
+    width: 100px;
+    margin: 0 400px 0 30px;
+    border: none;
+    background-color: rgb(24, 146, 24) ;
+    color: white;
+}
+
+.search button:hover{
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+.search input {
+    border-radius: 3px;
+    border: none;
+}
+.search input:hover{
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
