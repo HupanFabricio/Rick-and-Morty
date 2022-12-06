@@ -29,7 +29,10 @@ export default function Detail(props) {
         <div>
             <h1>{character.name}</h1>
             <img src={character.image} alt={character.name} />
-            <h3>Gender: {character.gender}</h3>
+            <h3>Status: {character.status} </h3>
+            <h3>Specie: {character.species} </h3>
+            <h3>Gender: {character.gender} </h3>
+            <h3>Origin: {character.origin?.name} </h3>
         </div>
     )
 }
