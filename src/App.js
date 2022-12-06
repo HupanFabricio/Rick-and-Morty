@@ -2,6 +2,9 @@ import { useState } from 'react';
 import './App.css'
 import Cards from './components/Cards/Cards.jsx'
 import Nav from './components/Nav/Nav.jsx'
+import { Routes, Route } from 'react-router-dom'
+import About  from './components/About/About.jsx'
+import Detail from './components/Detail/Detail';
 
 
 function App () {
@@ -43,7 +46,11 @@ function App () {
    <div className='App'>
       
       <Nav onSearch={onSearch}/>
-      <Cards onClose={onClose} characters={characters} />
+      <Routes>
+        <Route path='/' element={<Cards onClose={onClose} characters={characters} />}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/detail/:detailId' element={<Detail/>}/>
+      </Routes>
   
     </div>
   )

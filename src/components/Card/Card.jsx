@@ -1,4 +1,5 @@
 import styles from "./Card.module.css";
+import { Link } from "react-router-dom";
 
 export default function Card(props) {
    return (
@@ -9,8 +10,10 @@ export default function Card(props) {
          </div>
 
          <div className={styles.poss}>
-            <img src={props.image} alt={props.name}/> 
-            <h2>{props.name}</h2>
+            <Link to={`/detail/${props.detailId}`}>
+               <img src={props.image} alt={props.name}/> 
+               <h2>{props.name}</h2>
+            </Link>
          </div>
          
          <div className={styles.data}>
