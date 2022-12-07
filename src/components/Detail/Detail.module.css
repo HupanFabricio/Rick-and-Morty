@@ -1,0 +1,23 @@
+/* .container{
+    display:inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+} */
+
+.container img{
+ 
+    float:right;
+    margin-right: 200px;
+    width: 300px;
+    border-radius: 30px;
+}
+
+.container h3 {
+    flex-direction: column;
+    display:flow-root;
+    justify-content: right;
+
+
+}
+

@@ -26,7 +26,7 @@ export default function Detail(props) {
       console.log(character)
 
     return(
-        <div>
+        <div className={styles.container}>
             <h1>{character.name}</h1>
             <img src={character.image} alt={character.name} />
             <h3>Status: {character.status} </h3>
