@@ -1,6 +1,6 @@
 import styles from "./Detail.module.css";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom"; 
+import { useParams, Link } from "react-router-dom"; 
 
 export default function Detail(props) {
     const { detailId } = useParams();
@@ -27,6 +27,9 @@ export default function Detail(props) {
 
     return(
         <div className={styles.container}>
+            <Link to="/home">
+              <button>Go Back!</button>
+            </Link>
             <h1>{character.name}</h1>
             <img src={character.image} alt={character.name} />
             <h3>Status: {character.status} </h3>
