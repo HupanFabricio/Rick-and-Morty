@@ -1,29 +1,20 @@
-export default function Validation(imputs) {
+export default function Validation(inputs) {
 
     const errors = {};
 
     const regexEmail = /\S+@\S+\.\S+/
-    const regexPassword = new RegExp("[0-9]{0,}")
+    // const regexPassword = new RegExp("[0-9]{0,}")
+    const regexPassword = /\d/g
     //Username:
-    if (!regexEmail.test(imputs.username)) {
-        errors.username = "* El nombre de usuario tiene que ser un email";
-    }
+    if (!inputs.username) {errors.username = "* Completar campo"}
 
-    if (!imputs.username) {
-        errors.username = "* El nombre de usuario no puede estar vacío";
-    }
+    else if (!regexEmail.test(inputs.username)) { errors.username = "* No es un email" }
 
-    if (imputs.username.length > 35) {
-        errors.username = "* El nombre de usuario no puede tener más de 35 caracteres.";
-    }
+    else if (inputs.username.length > 35 ) {errors.username = "* Sobrepaso los 35 caracteres permitidos"} 
     //Password:
-    if (!regexPassword.test(imputs.password)) {
-        errors.password = "* La contraseña tiene que tener al menos un número."
-    }
+    if (!regexPassword.test(inputs.password)) { errors.password = "* Debe tener almenos 1 digito" }
 
-    if ((imputs.password.length < 6) || (imputs.password.length > 10)) {
-        errors.password = "* La contraseña tiene que tener una longitud entre 6 y 10 caracteres.";
-    }
+    if((6 > inputs.password.length) || (10 < inputs.password.length))  { errors.password = "* Debe estar entre los 6 a 10 caracteres" }
 
     return errors;
 } 
