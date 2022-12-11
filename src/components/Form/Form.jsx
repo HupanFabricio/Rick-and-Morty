@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Form.module.css'
 import Validation from './validation'
 
-export default function Form() {
+export default function Form(props) {
 
     const [userData, setUserData] = React.useState({
         username: "",
@@ -27,10 +27,14 @@ export default function Form() {
             })
         )
     }
+
+    const handleSubmit = () => {
+        props.login(userData)
+    }
     return (
-        <div>
-            <form >
-                <div className={styles.container}>
+        <div className={styles.conteiner}>
+            <form onSubmit={handleSubmit} className={styles.form}>
+                <div className={styles.div2}>
                     <label htmlFor="username">Username:</label>
                     <input
                         id="username"
@@ -50,9 +54,9 @@ export default function Form() {
                         onChange={handleInputChange}
                     />
                     <p> {error.password ? error.password : null} </p>
-                </div>
 
-                <button>LOGIN</button>
+                    <button type="submit">LOGIN</button>  
+                </div>
             </form>
         </div>
     )
