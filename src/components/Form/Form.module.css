@@ -1,20 +1,26 @@
 .conteiner {
     display: flex;
-    justify-content: center;
-
-}
-.form {
-    width: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    background-color: rgb(255, 255, 255,0.35);
+    padding: 2rem;
+}
+.conteiner img {
+    width: 10%;
+    margin-block-end: 2rem;
+}
+.form {
+    width: 50% ;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255,0.55);
 }
 .form p {
     text-align: center;
-    color:rgb(9, 255, 0);
-    size: 1cm;
+    color:rgb(255, 72, 0);
     
 }
 .div2 {
