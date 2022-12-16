@@ -33,12 +33,14 @@ export default function Form(props) {
     }
     return (
         <div className={styles.conteiner}>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLicplJ5jpsZlMdNE_-RlL1rnR0jgqDc0XSg&usqp=CAU" alt="logo" />
             <form onSubmit={handleSubmit} className={styles.form}>
+                <img src="https://pngimg.com/uploads/rick_morty/rick_morty_PNG17.png" alt="logo" />
+                <h2>Rick and Morty</h2>
                 <div className={styles.div2}>
-                    <label htmlFor="username">Username:</label>
+                    <label htmlFor="username"></label>
                     <input
                         id="username"
+                        placeholder='Email...'
                         name="username"
                         type="text"
                         value={userData.username}
@@ -46,9 +48,10 @@ export default function Form(props) {
                     />
                     <p> {error.username ? error.username: null} </p>
 
-                    <label htmlFor="password">Password:</label>
+                    <label htmlFor="password"></label>
                     <input
                         id="password"
+                        placeholder='Password...'
                         name="password"
                         type="password"
                         value={userData.password}

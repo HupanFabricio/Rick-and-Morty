@@ -1,33 +1,54 @@
 .conteiner {
+    font-size: large;
+    width: 100%;
+}
+
+.form {
+    width: 100% ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255,0.35);
-    padding: 2rem;
+    text-align: center;
 }
-.conteiner img {
-    width: 10%;
-    margin-block-end: 2rem;
+
+
+.form img {
+    left: 10%;
+    position: relative;
+    width: 70%;
 }
-.form {
-    width: 50% ;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(255, 255, 255,0.55);
-}
+
 .form p {
     text-align: center;
-    color:rgb(255, 72, 0);
-    
+    font-size: small;
+    color:rgb(255, 255, 255);
+}
+.form button {
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+}
+.form button:hover {
+    color: black;
+    background-color: white;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 5px;
 }
 .div2 {
     justify-content: center;
-    width: 50%;
-    
+    width: 100%;
 }
+
 .div2 input {
+    background-color:bisque;
+    text-align: center;
+    color: black;
+    padding: 5px;
+    border: none;
     border-radius: 5px;
+
 }

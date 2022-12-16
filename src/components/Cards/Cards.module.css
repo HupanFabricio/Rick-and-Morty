@@ -1,6 +1,5 @@
 .container{
     display: flex;
-    background-color: aquamarine;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }

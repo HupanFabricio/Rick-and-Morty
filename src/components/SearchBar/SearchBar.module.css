@@ -1,8 +1,7 @@
 .search{
     background-color: black;
     display: flex;
-    justify-content: right;
-    margin: 0 0 0 0; 
+    justify-content: right; 
 }
 
 .search button {
