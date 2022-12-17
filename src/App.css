@@ -1,5 +1,9 @@
 .App {
-   position: absolute;
+   width: 100%;
+}
+
+
+   /* position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%,-50%);
@@ -7,5 +11,4 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: rgba(172, 37, 55, 0.493);
-}
+   background-color: rgba(172, 37, 55, 0.493); */

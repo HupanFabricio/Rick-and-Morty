@@ -7,6 +7,7 @@ export default function Nav (props) {
         <div className={styles.container}>
             <Link to="/home">Home</Link>
             <Link to="/about">About</Link>
+            <img src="https://pngimg.com/uploads/rick_morty/rick_morty_PNG7.png" alt="skrill" />
             <SearchBar onSearch={props.onSearch}/>
         </div>
     )

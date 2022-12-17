@@ -1,11 +1,13 @@
 .search{
-    background-color: black;
+    margin-right: 2rem;
+    width: 100%;
     display: flex;
     justify-content: right; 
 }
 
 .search button {
     border-radius: 3px;
+    padding: 0.5rem;
     width: 100px;
     border: none;
     background-color: rgb(24, 146, 24) ;
