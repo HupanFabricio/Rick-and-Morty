@@ -1,16 +1,15 @@
 .container{
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content:space-between;
     width: 100%;
     background-color: rgb(100,100,100,1.5);
 }
+
 .container img {
-    width: 10%;
-    justify-content: center;
-    text-align: center;
-    text-align: center;
+    width: 15%;
+}
+.link {
+    padding: 1rem;
 }
 
-/* position: fixed;
-justify-content: left;
-text-align: left; */
