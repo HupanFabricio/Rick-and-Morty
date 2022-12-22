@@ -6,8 +6,9 @@ export default function Nav(props) {
     return (
         <div className={styles.container}>
             <div className={styles.link}>
-                <Link className={styles.Link} to="/home">Home</Link>
-                <Link className={styles.Link} to="/about">About</Link>
+                <Link class="material-symbols-outlined" to="/home">Home</Link>
+                <Link class="material-symbols-outlined" to="/about">Person</Link>
+                <Link class="material-symbols-outlined" to="/favorites">Favorite</Link>
             </div>
             <img src="https://pngimg.com/uploads/rick_morty/rick_morty_PNG7.png" alt="skrill" />
             <SearchBar onSearch={props.onSearch} />

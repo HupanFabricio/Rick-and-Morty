@@ -7,6 +7,7 @@ import About from './components/About/About.jsx'
 import Detail from './components/Detail/Detail';
 import Form from './components/Form/Form';
 import { useEffect } from 'react';
+import Favorites from './components/Favorites/Favorites';
 
 
 
@@ -74,6 +75,7 @@ function App() {
         <Route path='/' element={<Form login={login} />} />
         <Route path='/home' element={<Cards onClose={onClose} characters={characters} />} />
         <Route path='/about' element={<About />} />
+        <Route path='/favorites' element={<Favorites characters={characters} />} />
         <Route path='/detail/:detailId' element={<Detail />} />
       </Routes>
 

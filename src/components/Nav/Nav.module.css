@@ -9,7 +9,14 @@
 .container img {
     width: 15%;
 }
+
 .link {
-    padding: 1rem;
+    padding: 0 1rem;
 }
+
+.container :link {
+    padding: 0 2px;
+    text-decoration: none;
+}
+
 
