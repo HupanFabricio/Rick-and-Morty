@@ -1,11 +1,11 @@
 import { connect } from "react-redux"
 import Card from "../Card/Card"
-import styles from "./favorites.css"
+import styles from "./favorites.module.css"
 
 export function Favorites({ myFavorites }) {
   console.log(myFavorites)
   return (
-    <div className={styles.container}>
+    <div className={styles.contenedor}>
       {myFavorites.length? myFavorites.map((carta, index) =>
         <Card
           key={index}
