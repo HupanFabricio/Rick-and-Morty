@@ -3,6 +3,12 @@ import styles from './SearchBar.module.css'
 
 export default function SearchBar(props) {
 
+   function handleSubmit(e) {
+      e.preventDefault();
+      if(e.keyCode === 13)
+      console.log('You clicked submit.');
+   }
+
    const [character,setCharacter] = useState("");
 
    const handleChange = (e) => {
@@ -11,9 +17,9 @@ export default function SearchBar(props) {
    }
 
    return (
-      <div className={styles.search}>
-         <input type='search' onChange={handleChange} placeholder="Numero de personaje.."/>
-         <button onClick={ () => props.onSearch( character )}>Agregar</button>
-      </div>
+      <form className={styles.search} onSubmit={handleSubmit}>
+         <input id="text" type='text' onChange={handleChange} placeholder="Numero de personaje.."/>
+         <button id='submit' onClick={ () => props.onSearch( character )}>Agregar</button>
+      </form>
    );
 };

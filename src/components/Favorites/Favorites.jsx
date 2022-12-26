@@ -1,8 +1,9 @@
 import { connect } from "react-redux"
 import Card from "../Card/Card"
 import styles from "./favorites.module.css"
+import { deleteFavorites } from "../../redux/actions";
 
-export function Favorites({ myFavorites }) {
+export function Favorites({ myFavorites, deleteFavorites }) {
   console.log(myFavorites)
   return (
     <div className={styles.contenedor}>
@@ -14,6 +15,7 @@ export function Favorites({ myFavorites }) {
           species={carta.species}
           gender={carta.gender}
           image={carta.image}
+          onClose={() => deleteFavorites(carta)}
         />
 
       ) : null}
@@ -27,4 +29,12 @@ export function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, null)(Favorites)
+export function mapDispatchToProps(dispach) {
+  return {
+     deleteFavorites: function (personaje) {
+        dispach(deleteFavorites(personaje))
+     }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Favorites)
