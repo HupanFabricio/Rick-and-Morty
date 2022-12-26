@@ -18,7 +18,7 @@ export default function SearchBar(props) {
 
    return (
       <form className={styles.search} onSubmit={handleSubmit}>
-         <input id="text" type='text' onChange={handleChange} placeholder="Numero de personaje.."/>
+         <input id="text" type='text' onChange={handleChange} placeholder="Num de personaje.."/>
          <button id='submit' onClick={ () => props.onSearch( character )}>Agregar</button>
       </form>
    );
