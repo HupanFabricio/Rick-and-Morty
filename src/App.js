@@ -12,21 +12,21 @@ import Favorites from './components/Favorites/Favorites';
 
 
 function App() {
-  
-//Variabes:
+
+  //Variabes:
   const username = 'ejemplo@gmail.com';
   const password = '1password';
   const navigate = useNavigate();
   const location = useLocation();
 
-//States:
+  //States:
   const [access, setAccess] = useState(false)
   const [characters, setCharacters] = useState([]);
   useEffect(() => {
     !access && navigate('/');
   }, [access]);
 
-//Functions:
+  //Functions:
 
   const login = (userData) => {
     if ((username === userData.username) && (password === userData.password)) {
@@ -68,10 +68,10 @@ function App() {
   return (
     <div className='App'>
 
-      {location.pathname !== "/" && <Nav onSearch={onSearch} />}
+      {location.pathname !== "/" && <Nav onSearch={onSearch}  />}
       <Routes>
         <Route path='/' element={<Form login={login} />} />
-        <Route path='/home' element={<Cards onClose={onClose} characters={characters} />} />
+        <Route path='/home' element={<Cards onClose={onClose} characters={characters} location={ location.pathname } />} />
         <Route path='/about' element={<About />} />
         <Route path='/favorites' element={<Favorites characters={characters} />} />
         <Route path='/detail/:detailId' element={<Detail />} />

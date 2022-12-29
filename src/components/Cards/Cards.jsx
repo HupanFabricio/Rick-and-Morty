@@ -10,7 +10,9 @@ export default function Cards(props) {
       species={elements.species}
       gender={elements.gender}
       image={elements.image}
-      onClose={() => props.onClose (elements.id)} />)
+      onClose={() => props.onClose (elements.id)} 
+      location={props.location}
+      />)
    return (<div className={styles.container}>
       {pintarCartas}
    </div>);

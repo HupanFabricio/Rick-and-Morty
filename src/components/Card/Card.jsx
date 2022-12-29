@@ -26,15 +26,17 @@ export function Card(props) {
       }
    }
 
+   console.log(props.location)
    return (
       <div className={styles.container}>
 
          <div className={styles.butonConteiner}>
-            {
+            <button id="closed" onClick={props.onClose}>X</button>
+            { props.location === "/home" ?
                isFav ?
-                  (<button onClick={handleFavorite}>❤️</button>) : (<button onClick={handleFavorite}>🤍</button>)
+               (<button id="likes" onClick={handleFavorite}>❤️</button>) : (<button id="likes" onClick={handleFavorite}>🤍</button>)
+               : null
             }
-            <button onClick={props.onClose}>X</button>
          </div>
 
          <div className={styles.poss}>

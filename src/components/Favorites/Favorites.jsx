@@ -4,13 +4,12 @@ import styles from "./favorites.module.css"
 import { deleteFavorites } from "../../redux/actions";
 
 export function Favorites({ myFavorites, deleteFavorites }) {
-  console.log(myFavorites)
   return (
     <div className={styles.contenedor}>
       {myFavorites.length? myFavorites.map((carta, index) =>
         <Card
           key={index}
-          detailId={index}
+          detailId={carta.detailId}
           name={carta.name}
           species={carta.species}
           gender={carta.gender}
