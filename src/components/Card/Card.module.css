@@ -9,8 +9,8 @@
 }
 
 .container:hover{
-    transition: 0.5s;
-    box-shadow: 0 0 100px rgb(255, 255, 255);
+    transition: 0.2s;
+    box-shadow: -20px 20px 10px rgb(0,0,0, 0.3);
 }
 .poss{  
     position: relative;
